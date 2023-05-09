@@ -24,9 +24,7 @@ body {
   background-color: var(--primary-clr);
 }
 .container {
-  scroll-behavior: auto;
   width: 1600px;
-}
 
 li {
   list-style: none;
