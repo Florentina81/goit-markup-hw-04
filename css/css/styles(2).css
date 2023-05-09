@@ -1,0 +1,285 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --text-font-family: "Roboto", sans-serif;
+  --nav-backround-clr: #ececec;
+  --first-backround-clr: #2f303a;
+  --main-first-backround-clr: #e5e5e5;
+  --primary-clr: #ffffff;
+  --home-button-clr: #000000;
+  --secondary-clr: #212121;
+  --link-text-color: #757575;
+  --thrid-clr: #2196f3;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-clr);
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1600px;
+}
+
+.global-header .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.global-header .navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-left: 215px;
+  padding-bottom: 24px;
+}
+
+.global-header .navigation div {
+  display: flex;
+}
+
+.global-header .navigation ul li + li {
+  margin-left: 50px;
+}
+
+.global-header .navigation div a:first-child {
+  margin-right: 40px;
+  padding-left: 376px;
+}
+
+.global-header .navigation div a:last-child {
+  padding-right: 215px;
+}
+
+.navigation .home-button {
+  color: var(--home-button-clr);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.button {
+  color: var(--thrid-clr);
+}
+
+.navigation a,
+.navigation a:visited {
+  color: var(--secondary-color);
+  background-color: var(--primary-clr);
+  font-family: var(--text-font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.navigation a.active {
+  color: var(--thrid-clr);
+}
+
+.contact a {
+  color: var(--link-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.email {
+  color: var(--third-clr);
+}
+
+.phone {
+  color: var(--link-text-color);
+}
+
+.home-button :hover,
+.home-button :focus,
+.global-header .navigation a:hover,
+.global-header .navigation a:focus,
+.global-header .navigation .phone:hover,
+.global-header .navigation .phone:focus,
+.main-portofolio .second-section .filter-list button:hover,
+.main-portofolio .second-section .filter-list button:focus,
+.global-footer .third-section .footer-logo:hover,
+.global-footer .third-section .footer-logo:focus {
+  color: var(--thrid-clr);
+}
+
+ul.filter-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+li.Web-sites {
+  width: 120px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  justify-content: center;
+}
+li.Apps {
+  width: 83px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  justify-content: center;
+}
+li.Design {
+  width: 83px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  justify-content: center;
+}
+li.Marketing {
+  width: 121px;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.main-portofolio .second-section ul li + li {
+  margin-left: 8px;
+}
+
+.main-portofolio .second-section .filter-list li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.main-portofolio .second-section button {
+  color: var(--secondary-clr);
+  font-family: var(--text-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-portofolio .second-section button.active {
+  color: var(--primary-clr);
+  background-color: var(--thrid-clr);
+  border: none;
+  border-radius: 4px;
+  width: 64px;
+  height: 38px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.projects .projects-list h3 {
+  color: var(--secondary-clr);
+  font-family: var(--text-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.grid-container .projects-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+  padding: 94px 215px 94px 215px;
+}
+
+.projects .projects-list p {
+  color: var(--link-text-color);
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+
+.global-footer {
+  background-color: var(--first-backround-clr);
+}
+
+.global-footer .third-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 215px;
+}
+
+.global-footer .third-section .footer-contact {
+  display: inline-block;
+  flex-direction: column;
+  padding-left: 0;
+  padding-bottom: 60px;
+}
+
+.global-footer .third-section .footer-logo {
+  color: var(--primary-clr);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding-top: 60px;
+}
+
+.third-section .footer-button {
+  color: var(--thrid-clr);
+}
+.global-footer .third-section address {
+  color: var(--primary-clr);
+  font-family: var(--text-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  padding-top: 28px;
+}
+
+.global-footer .third-section a {
+  color: var(--primary-clr);
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.global-footer .third-section ul li {
+  padding-top: 12px;
+}
