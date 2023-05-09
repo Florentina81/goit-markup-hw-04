@@ -21,11 +21,11 @@
 body {
   color: var(--secondary-color);
   font-family: var(--text-font-family), sans-serif;
-  width: 1600px;
   background-color: var(--primary-clr);
 }
 .container {
   scroll-behavior: auto;
+  width: 1600px;
 }
 
 li {
