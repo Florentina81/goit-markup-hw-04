@@ -49,7 +49,6 @@ h6 {
 ul {
   list-style-type: none;
 }
-/* ALL SECTION CLASS */
 
 .section {
   margin: auto;
@@ -60,7 +59,6 @@ ul {
 .filter-buttons {
   margin-bottom: 50px;
 }
-/* GLOBAL CONTAINER */
 
 .container {
   max-width: 1200px;
@@ -72,8 +70,6 @@ ul {
   display: flex;
   align-items: center;
 }
-
-/* GLOBAL HEADER */
 
 .global-header {
   padding: 24px 0;
@@ -114,12 +110,17 @@ ul {
   outline: 0;
 }
 
-.nav-active-bar {
+.active {
   position: relative;
 }
 
-.nav-active-bar:hover::after,
-.nav-active-bar:focus::after {
+.logo-container .home-button:hover,
+.logo-container .home-button:focus {
+  color: var(--link-active-color);
+}
+
+.active:hover::after,
+.active:focus::after {
   content: "";
   position: absolute;
   height: 4px;
@@ -136,13 +137,13 @@ ul {
   flex-grow: 1;
 }
 
-.global-header .logo {
+.global-header .home-button {
   font-family: Raleway, sans-serif;
   font-size: 27px;
   font-weight: 700;
   color: #000000;
 }
-.global-header .web {
+.global-header .button {
   color: #2196f3;
 }
 .global-header a.mail {
@@ -213,8 +214,6 @@ ul {
   margin-right: 10px;
 }
 
-/* FIRST SECTION */
-
 .first-section {
   background: var(--dark-gray-section-color);
   text-align: center;
@@ -224,7 +223,7 @@ ul {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/background2.jpg");
+    url("../img/title-background.jpg);
   background-repeat: no-repeat;
 }
 
@@ -244,8 +243,6 @@ ul {
   background: #fff;
   color: #000000;
 }
-
-/* SECOND SECTION */
 
 .second-section {
   color: var(--second-section-color);
@@ -279,8 +276,6 @@ ul {
   margin-bottom: 30px;
 }
 
-/* THIRD SECTION */
-
 .third-section-flex {
   display: flex;
   justify-content: space-between;
@@ -288,8 +283,6 @@ ul {
 .third-section {
   padding-top: 0;
 }
-
-/* FOURTH SECTION  */
 
 .fourth-section {
   background: var(--light-gray-section-color);
@@ -334,7 +327,6 @@ ul li div {
 ul li p {
   margin: 0;
 }
-/* Aici am introdus iconitele social media */
 
 .ourteam-list .icons-list .icons {
   display: flex;
@@ -363,8 +355,6 @@ ul li p {
   outline: 0;
 }
 
-/* FIFTH SECTION  */
-
 .main-customers-container {
   display: flex;
   justify-content: center;
@@ -391,7 +381,6 @@ ul li p {
   border: 1px solid var(--social-icons--background-color);
   cursor: pointer;
 }
-/* GLOBAL FOOTER */
 
 .footer-flex {
   display: flex;
@@ -414,19 +403,23 @@ ul li p {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+.global-footer .footer-flex .button:hover,
+.global-footer .footer-flex .button:focus {
+  color: var(--link-active-color);
+}
 
 address a:hover,
 address a:focus {
   color: #fff;
 }
 
-.global-footer .logo {
+.global-footer .home-button {
   color: #2196f3;
   font-family: Raleway, sans-serif;
   font-size: 27px;
   font-weight: 700;
 }
-.global-footer .logo .studio {
+.global-footer .home-button .button {
   color: #ffffff;
 }
 
@@ -487,10 +480,6 @@ address a:focus {
   border-radius: 50%;
   outline: 0;
 }
-
-/* PORTFOLIO PAGE */
-
-/* FILTER SECTION */
 
 .section .category-flex {
   padding-top: 0;

@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- META | Folosite de browser si motoarele de cautare -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Mai întâi normalizarea -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <!-- Apoi stilurile -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- TITLE | Acest text o sa aparata in bara de sus a browserului (TAB) -->
-    <title>Web Studio Homework Project</title>
+    <title>Document</title>
   </head>
-  <!-- BODY | este partea pe care o vedem noi intr-o pagina web -->
+
   <body>
-    <!-- HEADER | Partea de sus a unui site -->
     <header class="global-header section">
       <div class="container global-container">
         <div class="logo-container">
-          <a href="index.html" class="logo"
-            ><span class="web">Web</span>Studio</a
+          <a href="index.html" class="home-button"
+            ><span class="button">Web</span>Studio</a
           >
         </div>
         <div class="super-nav-class">
           <nav class="main-navigation">
-            <!-- Sectiunea nav, contine doar link-urile pentru navigatie -->
-            <!-- Vom adauga valoare pentru href atunci cand avem create si restul paginilor  -->
-            <!-- Link spre pagina acasa -->
-            <a href="./index.html" class="nav-active-bar">Studio</a>
-            <a href="portfolio.html" class="nav-active-bar">Portfolio</a>
-            <a href="Contacts" class="nav-active-bar">Contacts</a>
+            <a href="./index.html" class="active">Studio</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="Contacts" class="active">Contacts</a>
           </nav>
           <ul class="contact">
             <li>
               <a href="info@devstudio.com" class="mail"
-                ><svg><use href="./images/symbol-defs.svg#icon-mail"></use></svg
+                ><svg>
+                  <use
+                    href="./icons/symbol-defs.svg#icon-envelope-hover"
+                  ></use></svg
                 >info@devstudio.com
               </a>
             </li>
@@ -45,7 +40,7 @@
               <a href="tel:+12127724150" class="phone-number"
                 ><svg>
                   <use
-                    href="./images/symbol-defs.svg#icon-smartphone"
+                    href="./icons/symbol-defs.svg#icon-smartphone"
                   ></use></svg
                 >+1 212-772-4150</a
               >
@@ -54,9 +49,8 @@
         </div>
       </div>
     </header>
-    <!-- MAIN SECTION | Partea principala a site-ului nostru-->
+
     <main>
-      <!-- FIRST SECTION | Contine titlul -->
       <section class="first-section section">
         <div class="container">
           <h1>
@@ -68,13 +62,13 @@
           </button>
         </div>
       </section>
-      <!-- SECOND SECTION | Contine cele mai importante calitati regasite in cadrul studioului -->
+
       <section class="second-section section">
         <div class="container second-section-flex">
           <div>
             <div class="second-section-items-container">
               <svg width="70px" height="70px">
-                <use href="./images/symbol-defs.svg#icon-antenna"></use>
+                <use href="./icons/symbol-defs.svg#icon-antenna"></use>
               </svg>
             </div>
             <p>ATTENTION TO DETAILS</p>
@@ -87,7 +81,7 @@
           <div>
             <div class="second-section-items-container">
               <svg width="70px" height="70px">
-                <use href="./images/symbol-defs.svg#icon-clock"></use>
+                <use href="./icons/symbol-defs.svg#icon-clock"></use>
               </svg>
             </div>
             <p>PUNCTUALITY</p>
@@ -100,7 +94,7 @@
           <div>
             <div class="second-section-items-container">
               <svg width="70px" height="70px">
-                <use href="./images/symbol-defs.svg#icon-diagram"></use>
+                <use href="./icons/symbol-defs.svg#icon-diagram"></use>
               </svg>
             </div>
             <p>PLANNING</p>
@@ -113,7 +107,7 @@
           <div>
             <div class="second-section-items-container">
               <svg width="70px" height="70px">
-                <use href="./images/symbol-defs.svg#icon-astronaut"></use>
+                <use href="./icons/symbol-defs.svg#icon-astronaut"></use>
               </svg>
             </div>
             <p>MODERN TECHNOLOGIES</p>
@@ -125,43 +119,24 @@
           </div>
         </div>
       </section>
-      <!-- THIRD SECTION | Cu ce se ocupa studioul -->
+
       <section class="third-section section">
         <div class="container">
           <h2>What we do</h2>
           <div class="third-section-flex">
-            <img
-              src="images\laptop.jpg"
-              alt="Laptop apps"
-              width="370px"
-              height="294px"
-            />
-            <img
-              src="images\mobile.jpg"
-              alt="Mobile apps"
-              width="370px"
-              height="294px"
-            />
-            <img
-              src="images\tableta.jpg"
-              alt="Tablet apps"
-              width="370px"
-              height="294px"
-            />
+            <img src="img/img.jpg" alt="Laptop" width="370px" />
+            <img src="img/img1.jpg" alt="Mobile" width="370px" />
+            <img src="img/img2.jpg" alt="Tablet" width="370px" />
           </div>
         </div>
       </section>
-      <!-- FOURTH SECTION | Echipa -->
+
       <section class="fourth-section section">
         <div class="container fourth-section-flex">
           <h2>Our Team</h2>
           <ul class="ourteam-list">
             <li>
-              <img
-                src="images\Christopher.jpg"
-                alt="Christopher Walker foto"
-                width="270px"
-              />
+              <img src="img/img3.jpg" alt="Christopher Walker" width="270px" />
               <div>
                 <p>Christopher Walker</p>
                 <em>Product Designer</em>
@@ -206,11 +181,7 @@
               </div>
             </li>
             <li>
-              <img
-                src="images\Kylie.jpg"
-                alt="Kylie Evans foto"
-                width="270px"
-              />
+              <img src="img/img4.jpg" alt="Kylie Evans" width="270px" />
               <div>
                 <p>Kylie Evans</p>
                 <em>Frontend Developer</em>
@@ -255,7 +226,7 @@
               </div>
             </li>
             <li>
-              <img src="images\Ryan.jpg" alt="Ryan Harris foto" width="270px" />
+              <img src="img/img5.jpg" alt="Ryan Harris" width="270px" />
               <div>
                 <p>Ryan Harris</p>
                 <em>Marketing</em>
@@ -300,11 +271,7 @@
               </div>
             </li>
             <li>
-              <img
-                src="images\Tyler.jpg"
-                alt="Tyler Moore foto"
-                width="270px"
-              />
+              <img src="img/img6.jpg" alt="Tyler Moore" width="270px" />
               <div>
                 <p>Tyler Moore</p>
                 <em>UI Designer</em>
@@ -351,56 +318,56 @@
           </ul>
         </div>
       </section>
-      <!-- Fifth SECTION | Clienti fideli -->
+
       <section class="section">
         <div class="container">
           <h2>Regular Customers</h2>
           <div class="main-customers-container">
             <div class="customers-container">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-Logo"></use>
+                <use href="./icons/symbol-defs.svg#icon-Logo1"></use>
               </svg>
             </div>
             <div class="customers-container">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-logo1"></use>
+                <use href="./icons/symbol-defs.svg#icon-Logo2"></use>
               </svg>
             </div>
             <div class="customers-container">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-logo2"></use>
+                <use href="./icons/symbol-defs.svg#icon-Logo3"></use>
               </svg>
             </div>
             <div class="customers-container">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-logo3"></use>
+                <use href="./icons/symbol-defs.svg#icon-Logo4"></use>
               </svg>
             </div>
             <div class="customers-container">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-logo4"></use>
+                <use href="./icons/symbol-defs.svg#icon-Logo5"></use>
               </svg>
             </div>
             <div class="customers-container">
               <svg>
-                <use href="./images/symbol-defs.svg#icon-logo5"></use>
+                <use href="./icons/symbol-defs.svg#icon-Logo6"></use>
               </svg>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!-- FOOTER | Partea de jos a unui site  -->
+
     <footer class="global-footer section">
       <div class="container footer-flex">
         <div>
-          <a href="index.html" class="logo"
-            >Web<span class="studio">Studio</span></a
+          <a href="index.html" class="home-button"
+            >Web<span class="button">Studio</span></a
           >
-          <!-- ADDRESS | Adresa studioului -->
+
           <address class="main-addres">
             <p class="corection">695 Park Ave, NY 10065, USA</p>
-            <!-- INFO | Informatii contact -->
+
             <div class="corection-link">
               <a href="info@devstudio.com">info@devstudio.com</a>
             </div>
@@ -420,7 +387,7 @@
               aria-label="Instagram"
             >
               <svg>
-                <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                <use href="./icons/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </a>
             <a
@@ -429,7 +396,7 @@
               aria-label="Twitter"
             >
               <svg>
-                <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                <use href="./icons/symbol-defs.svg#icon-twitter"></use>
               </svg>
             </a>
             <a
@@ -438,7 +405,7 @@
               aria-label="Facebook"
             >
               <svg>
-                <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                <use href="./icons/symbol-defs.svg#icon-facebook"></use>
               </svg>
             </a>
             <a
@@ -447,7 +414,7 @@
               aria-label="LinkedIn"
             >
               <svg>
-                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                <use href="./icons/symbol-defs.svg#icon-linkledin"></use>
               </svg>
             </a>
           </div>
