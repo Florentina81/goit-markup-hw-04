@@ -2,15 +2,13 @@
 
 :root {
   --text-font-family: Roboto, sans-serif;
-  --link-color: #212121;
-  --link-active-color: #2196f3;
-  --second-section-color: #757575;
-  --dark-gray-section-color: #2f303a;
-  --light-gray-section-color: #f5f4fa;
-  --social-icons--normal-color: #afb1b8;
-  --social-icons--hover-color: #fff;
-  --social-icons--background-color: #2196f3;
-  --social-mail-icons--normal-color: #757575;
+  --secondary-clr: #212121;
+  --third-clr: #2196f3;
+  --link-text-clr: #757575;
+  --dark-gray-section-clr: #2f303a;
+  --main-second-backround-clr: #f5f4fa;
+  --social-icons-clr: #afb1b8;
+  --primary-clr: #fff;
 }
 
 body {
@@ -18,7 +16,7 @@ body {
 }
 
 h1 {
-  color: #ffffff;
+  color: var(--primary-clr);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -29,7 +27,7 @@ h1 {
   padding-bottom: 30px;
 }
 h2 {
-  color: #212121;
+  color: var(--secondary-clr);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
@@ -73,17 +71,32 @@ ul {
 
 .global-header {
   padding: 24px 0;
-  background: #ffffff;
+  background: var(--primary-clr);
   border-bottom: 1px solid #e5e5e5;
 }
 
 .global-header a {
-  color: var(--link-color);
+  color: var(--secondary-clr);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+.main-navigation .active-studio {
+  color: var(--third-clr);
+  position: relative;
+}
+.main-navigation .active-studio:hover::after,
+.main-navigation .active-studio:focus::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--third-clr);
+  top: 46px;
+  left: 0;
+  border-radius: 2px;
 }
 
 .main-navigation {
@@ -106,7 +119,7 @@ ul {
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-  color: var(--link-active-color);
+  color: var(--third-clr);
   outline: 0;
 }
 
@@ -116,7 +129,7 @@ ul {
 
 .logo-container .home-button:hover,
 .logo-container .home-button:focus {
-  color: var(--link-active-color);
+  color: var(--third-clr);
 }
 
 .active:hover::after,
@@ -125,7 +138,7 @@ ul {
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: var(--link-active-color);
+  background-color: var(--third-clr);
   top: 46px;
   left: 0;
   border-radius: 2px;
@@ -144,13 +157,13 @@ ul {
   color: #000000;
 }
 .global-header .button {
-  color: #2196f3;
+  color: var(--third-clr);
 }
 .global-header a.mail {
   position: relative;
   display: flex;
   align-items: center;
-  color: var(--second-section-color);
+  color: var(--link-text-clr);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -158,7 +171,7 @@ ul {
 }
 .global-header a.mail:hover,
 .global-header a.mail:focus {
-  color: var(--link-active-color);
+  color: var(--third-clr);
   outline: 0;
 }
 
@@ -168,7 +181,7 @@ ul {
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: var(--link-active-color);
+  background-color: var(--third-clr);
   top: 46px;
   left: 0;
   border-radius: 2px;
@@ -177,7 +190,7 @@ ul {
 .global-header a.phone-number {
   position: relative;
   display: flex;
-  color: var(--second-section-color);
+  color: var(--link-text-clr);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -188,7 +201,7 @@ ul {
 
 .global-header a.phone-number:hover,
 .global-header a.phone-number:focus {
-  color: var(--link-active-color);
+  color: var(--third-clr);
 }
 
 .global-header a.phone-number:hover::after,
@@ -197,7 +210,7 @@ ul {
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: var(--link-active-color);
+  background-color: var(--third-clr);
   top: 46px;
   left: 0;
   border-radius: 2px;
@@ -208,14 +221,15 @@ ul {
   height: 12px;
   margin-right: 10px;
 }
+
 .contact .phone-number svg {
   width: 10px;
   height: 16px;
   margin-right: 10px;
 }
 
-.first-section {
-  background: var(--dark-gray-section-color);
+.main-title-backround .first-section {
+  background: var(--dark-gray-section-clr);
   text-align: center;
   min-height: 100%;
   background: linear-gradient(
@@ -223,7 +237,7 @@ ul {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../img/title-background.jpg);
+    url("../img/title-background.jpg");
   background-repeat: no-repeat;
 }
 
@@ -234,18 +248,21 @@ ul {
   font-weight: 700;
   line-height: 1.9;
   letter-spacing: 0.06em;
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: var(--third-clr);
+  color: var(--primary-clr);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   cursor: pointer;
 }
+
 .request-button:hover,
 .request-button:focus {
-  background: #fff;
+  background: var(--primary-clr);
   color: #000000;
 }
 
 .second-section {
-  color: var(--second-section-color);
+  color: var(--link-text-clr);
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -257,7 +274,7 @@ ul {
 }
 
 .second-section p {
-  color: #212121;
+  color: var(--secondary-clr);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
@@ -269,7 +286,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-gray-section-color);
+  background-color: var(--main-second-backround-clr);
   width: 270px;
   height: 120px;
   border-radius: 4px;
@@ -285,7 +302,7 @@ ul {
 }
 
 .fourth-section {
-  background: var(--light-gray-section-color);
+  background: var(--main-second-backround-clr);
 }
 
 .fourth-section-flex ul {
@@ -296,7 +313,7 @@ ul {
 }
 
 .fourth-section li {
-  background: #ffffff;
+  background: var(--primary-clr);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -313,7 +330,7 @@ ul {
 }
 
 .fourth-section li em {
-  color: var(--second-section-color);
+  color: var(--link-text-clr);
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
@@ -334,8 +351,9 @@ ul li p {
   justify-content: center;
   height: 44px;
   width: 44px;
-  color: var(--social-icons--normal-color);
+  fill: var(--social-icons-clr);
 }
+
 .icons-list .icons svg {
   width: 20px;
   height: 20px;
@@ -349,8 +367,8 @@ ul li p {
 }
 .ourteam-list .icons-list .icons:hover,
 .ourteam-list .icons-list .icons:focus {
-  color: var(--social-icons--hover-color);
-  background-color: var(--social-icons--background-color);
+  color: var(--primary-clr);
+  background-color: var(--third-clr);
   border-radius: 50%;
   outline: 0;
 }
@@ -359,26 +377,28 @@ ul li p {
   display: flex;
   justify-content: center;
   gap: 30px;
-  color: var(--social-mail-icons--normal-color);
+  color: var(--link-text-clr);
 }
+
 .customers-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid var(--social-icons--normal-color);
+  border: 1px solid var(--social-icons-clr);
   border-radius: 4px;
 }
-.main-customers-container .customers-container svg {
+
+.customers-container: .main-customers-container .customers-container svg {
   width: 106px;
   height: 60px;
 }
 
 .main-customers-container .customers-container:hover,
 .main-customers-container .customers-container:focus {
-  color: var(--social-icons--background-color);
-  border: 1px solid var(--social-icons--background-color);
+  color: var(--third-clr);
+  border: 1px solid var(--third-clr);
   cursor: pointer;
 }
 
@@ -390,7 +410,7 @@ ul li p {
 }
 
 .global-footer {
-  background: var(--dark-gray-section-color);
+  background: var(--dark-gray-section-clr);
   padding: 0;
 }
 
@@ -405,26 +425,26 @@ ul li p {
 }
 .global-footer .footer-flex .button:hover,
 .global-footer .footer-flex .button:focus {
-  color: var(--link-active-color);
+  color: var(--third-clr);
 }
 
 address a:hover,
 address a:focus {
-  color: #fff;
+  color: var(--primary-clr);
 }
 
 .global-footer .home-button {
-  color: #2196f3;
+  color: var(--third-clr);
   font-family: Raleway, sans-serif;
   font-size: 27px;
   font-weight: 700;
 }
 .global-footer .home-button .button {
-  color: #ffffff;
+  color: var(--primary-clr);
 }
 
 .global-footer .main-addres {
-  color: #ffffff;
+  color: var(--primary-clr);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -445,7 +465,7 @@ address a:focus {
 }
 
 .global-footer .footer-flex .last-class {
-  color: var(--social-icons--hover-color);
+  color: var(--primary-clr);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
@@ -463,7 +483,9 @@ address a:focus {
   width: 44px;
   background-color: #ffffff1a;
   border-radius: 50%;
+  fill: var(--primary-clr);
 }
+
 .footer-icons-list .footer-icons svg {
   width: 20px;
   height: 20px;
@@ -475,8 +497,8 @@ address a:focus {
 }
 .global-footer .footer-icons-list .footer-icons:hover,
 .global-footer .footer-icons-list .footer-icons:focus {
-  color: var(--social-icons--hover-color);
-  background-color: var(--social-icons--background-color);
+  color: var(--primary-clr);
+  background-color: var(--third-clr);
   border-radius: 50%;
   outline: 0;
 }
@@ -509,11 +531,11 @@ address a:focus {
 
 .filter-section-button button:hover,
 .filter-section-button button:focus {
-  background: #2196f3;
+  background: var(--third-clr);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  color: #fff;
+  color: var(--primary-clr);
 }
 
 .category-flex {
@@ -525,14 +547,14 @@ address a:focus {
   gap: 27px;
 }
 .category-section li {
-  background: #ffffff;
+  background: var(--primary-clr);
 }
 .category-section li p {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--secondary-clr);
   margin-left: 24px;
 }
 .category-section li em {
