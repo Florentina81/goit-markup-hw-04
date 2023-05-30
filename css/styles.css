@@ -83,10 +83,12 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+
 .main-navigation .active-studio {
   color: var(--third-clr);
   position: relative;
 }
+
 .main-navigation .active-studio:hover::after,
 .main-navigation .active-studio:focus::after {
   content: "";
